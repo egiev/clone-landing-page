@@ -1,0 +1,41 @@
+@import "../../../../assets/scss/variable";
+
+footer {
+  background: #d2d6db;
+  padding: 48px;
+  text-align: center;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #202428;
+  padding: 10px;
+}
+
+footer ul li a:hover {
+  color: $primary-color;
+}
+
+.social-medias {
+  padding: 20px;
+  margin: 12px 0px;
+}
+
+.social-medias i {
+  color: #64707d;
+  font-size: 22px;
+  margin: 0px 12px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+footer p > a {
+  font-weight: bold;
+  color: #202428;
+}
+
+footer p > a:hover {
+  color: $primary-color;
+}

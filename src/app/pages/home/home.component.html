@@ -1,0 +1,100 @@
+<app-layout>
+  <div class="wrapper">
+    <!-- landing left -->
+    <div class="left-content" [ngClass]="{'show': toggle_state}">
+      <div class="title">
+        <h3 class="d-inline">DEV Community</h3>
+        <button type="button" class="close" aria-label="Close" (click)="hideMenu()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="card p-3 mb-2">
+        <h2 class="font-weight-bold mb-2"><a href="">DEV Community</a> is a community of 563,099 amazing developers</h2>
+        <p class="mb-4">We're a place where coders share, stay up-to-date and grow their careers.</p>
+
+        <button class="btn btn-btn-block btn-primary mb-2">Create Account</button>
+        <button class="btn btn-btn-block btn-link">Login</button>
+      </div>
+
+      <ul class="nav flex-column">
+        <li class="nav-item" *ngFor="let i of nav_items">
+          <a class="nav-link active" [routerLink]="i.path">
+            <i [ngClass]="i.icon"></i>
+            {{ i.label }}
+          </a>
+      </ul>
+
+      <div class="social-medias">
+        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-facebook-square"></i></a>
+        <a href=""><i class="fab fa-github"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-twitch"></i></a>
+      </div>
+
+      <div class="popular-tags mt-3">
+        <h5>Popular Tags</h5>
+        <div class="tags" appTags *ngFor="let i of popular_tags">
+          <a href="" class="">#{{i.label}}</a>
+          <button class="btn btn-primary btn-sm sr-only">Follow</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- landing content -->
+    <div class="content">
+      <app-story *ngFor="let i of stories" [story]="i"></app-story>
+    </div>
+
+    <!-- landing right -->
+    <div class="right-content">
+      <div class="card mb-2 event">
+        <img src="../../../assets/img/event.png" alt="" class="img-fluid mb-2">
+        <h2>Celebrating Black History Month!</h2>
+        <p>
+          For Black History Month, we're talking about the Black tech leaders who inspire you.
+          <a href="">join the convo</a>
+        </p>
+      </div>
+
+      <div class="card mb-3">
+        <div class="header d-flex justify-content-between">
+          <h3>Listing</h3>
+          <a href="">Ses all</a>
+        </div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              Building self-hosted, customizable and performant Content APIs has never been easier.
+              <p>products</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam a quis deleniti possimus officiis blanditiis, nihil.
+              <p>products</p>
+            </a>
+          </li>
+        </ul>
+        <button class="btn btn-link btn-sm p-3" id="create-listing">Creaet a Listing</button>
+      </div>
+      
+      <div class="card">
+        <div class="header d-flex justify-content-between">
+          <h3>#news</h3>
+        </div>
+        <ul class="nav flex-column">
+          <li class="nav-item" *ngFor="let i of stories">
+            <a class="nav-link" href="#">
+              {{ i.title }}
+              <p *ngIf="i.comments.length > 0">{{ i.comments.length }} comments</p>
+              <p *ngIf="i.comments.length == 0">new</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</app-layout>

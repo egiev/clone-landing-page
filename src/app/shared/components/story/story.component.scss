@@ -1,0 +1,89 @@
+// story
+.story .indention {
+  padding-left: 40px;
+}
+
+.avatar img {
+  height: 32px;
+  border-radius: 25px;
+  float: left;
+  margin-right: 8px;
+  background: #08090a;
+}
+
+.avatar .info p{
+  font-size: 14px;
+  margin: 0;
+  line-height: 16px;
+  color: #4d5760;
+}
+
+.avatar .date-published {
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 24px;
+  color: #08090a;
+  font-weight: bold;
+}
+
+.tags {
+  font-size: 14px;
+  color: #64707d;
+  margin-right: 10px;
+}
+
+.tags:last-child {
+  margin-right: 0px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reactions,
+.comments {
+  font-size: 14px;
+  padding: 8px;
+  color: #363d44;
+  text-decoration: none;
+  margin: 0px 3px;
+  line-height: 30px;
+}
+
+.reactions:hover,
+.comments:hover {
+  color: #08090a;
+  background: rgb(0 0 0 / .15);
+}
+
+.reactions i,
+.comments i {
+  margin-right: 8px;
+}
+
+.btn-secondary {
+  background: #d2d6db;
+  color: #363d44;
+  border-color: #d2d6db;
+}
+
+.btn-secondary:hover {
+  background: #b5bdc4;
+  color: #08090a;
+  border-color: #b5bdc4;
+}
+
+.save span {
+  font-size: 12px;
+  color: #64707d;
+  margin-right: 8px;
+}
+
+@media (max-width: 1199.98px) {
+  .actions {
+    display: block;
+  }
+}

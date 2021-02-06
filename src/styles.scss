@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/scss/variable';
+
+body,
+html {
+  background: #eef0f1 !important;
+  margin-top: 60px;
+}
+
+.btn-primary {
+  background: $primary-color !important;
+  border-color: $primary-color !important;
+}
