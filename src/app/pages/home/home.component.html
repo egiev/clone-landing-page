@@ -1,5 +1,6 @@
 <app-layout>
   <div class="wrapper">
+
     <!-- landing left -->
     <div class="left-content" [ngClass]="{'show': toggle_state}">
       <div class="title">
@@ -41,11 +42,47 @@
         </div>
       </div>
     </div>
+    <!-- end left -->
     
     <!-- landing content -->
     <div class="content">
+      <div class="d-flex justify-content-between mb-2 sort-container">
+        <h5>Post</h5>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Feed</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Week</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Month</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Year</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Infinity</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Latest</a>
+          </li>
+        </ul>
+
+        <select name="" id="" class="form-control">
+          <option value="">Feed</option>
+          <option value="">Week</option>
+          <option value="">Month</option>
+          <option value="">Year</option>
+          <option value="">Infinity</option>
+          <option value="">Latest</option>
+        </select>
+      </div>
+
+      <!-- display story card -->
       <app-story *ngFor="let i of stories" [story]="i"></app-story>
     </div>
+    <!-- end landing content -->
 
     <!-- landing right -->
     <div class="right-content">
@@ -64,18 +101,7 @@
           <a href="">Ses all</a>
         </div>
         <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Building self-hosted, customizable and performant Content APIs has never been easier.
-              <p>products</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam a quis deleniti possimus officiis blanditiis, nihil.
-              <p>products</p>
-            </a>
-          </li>
+          <app-listing *ngFor="let i of topics" [topic]="i"></app-listing>
         </ul>
         <button class="btn btn-link btn-sm p-3" id="create-listing">Creaet a Listing</button>
       </div>
@@ -85,16 +111,11 @@
           <h3>#news</h3>
         </div>
         <ul class="nav flex-column">
-          <li class="nav-item" *ngFor="let i of stories">
-            <a class="nav-link" href="#">
-              {{ i.title }}
-              <p *ngIf="i.comments.length > 0">{{ i.comments.length }} comments</p>
-              <p *ngIf="i.comments.length == 0">new</p>
-            </a>
-          </li>
+          <app-news *ngFor="let i of stories" [news]="i"></app-news>
         </ul>
       </div>
-
     </div>
+    <!-- end landing right -->
+
   </div>
 </app-layout>

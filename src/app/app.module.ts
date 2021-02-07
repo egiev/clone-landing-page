@@ -10,6 +10,8 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { BurgerMenuDirective } from './shared/directives/burger-menu.directive';
 import { TagsDirective } from './shared/directives/tags.directive';
 import { StoryComponent } from './shared/components/story/story.component';
+import { ListingComponent } from './shared/components/listing/listing.component';
+import { NewsComponent } from './shared/components/news/news.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { StoryComponent } from './shared/components/story/story.component';
     StoryComponent,
     TagsDirective,
     BurgerMenuDirective,
+    ListingComponent,
+    NewsComponent,
   ],
   imports: [
     BrowserModule,

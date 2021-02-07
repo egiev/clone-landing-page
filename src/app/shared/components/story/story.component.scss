@@ -11,7 +11,7 @@
   background: #08090a;
 }
 
-.avatar .info p{
+.avatar .info p {
   font-size: 14px;
   margin: 0;
   line-height: 16px;
@@ -56,7 +56,7 @@ h2 {
 .reactions:hover,
 .comments:hover {
   color: #08090a;
-  background: rgb(0 0 0 / .15);
+  background: rgb(0 0 0 / 0.15);
 }
 
 .reactions i,
@@ -83,7 +83,15 @@ h2 {
 }
 
 @media (max-width: 1199.98px) {
-  .actions {
-    display: block;
+}
+
+@media (max-width: 575.98px) {
+  .story .indention {
+    padding-left: 0px;
+  }
+
+  .reactions span,
+  .comments span {
+    display: none;
   }
 }

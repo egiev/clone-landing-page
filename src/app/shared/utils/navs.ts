@@ -1,4 +1,6 @@
-export const sidenav = [
+import { SideNav } from '../models/sidenav.model';
+
+export const sidenav: SideNav[] = [
   {
     label: 'Home',
     path: '',
