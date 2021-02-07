@@ -1,0 +1,24 @@
+@import '../../../../assets/scss/variable';
+
+li a {
+  color: #202428;
+  padding: 16px;
+  text-decoration: none;
+  border-bottom: 1px solid #eef0f1;
+  transition: all 0.5s ease;
+}
+
+li a:hover {
+  color: $primary-color;
+  background: #fff;
+}
+
+li a p {
+  font-size: 14px;
+  margin: 5px 0px 0px 0px;
+  color: #64707d;
+}
+
+li a:hover p {
+  color: #64707d;
+}

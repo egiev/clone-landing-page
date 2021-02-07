@@ -19,12 +19,12 @@
         <a href="" class="reactions" *ngIf="story.reactions">
           <i class="far fa-heart"></i>
           {{ story.reactions }}
-          reactions
+          <span>reactions</span>
         </a>
         <a href="" class="comments" *ngIf="story.comments && story.comments.length > 0">
           <i class="far fa-comment"></i>
           {{ story.comments.length }}
-          comments
+          <span>comments</span>
         </a>
       </div>
 
